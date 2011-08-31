@@ -7,6 +7,10 @@
 # Maximum number of open files (for ulimit -n)
 NFILES=131072
 
+# Locked shared memory (for ulimit -l)
+# Default log size is 82MB + header
+MEMLOCK=<%= @memlock %>
+
 # Default varnish instance name is the local nodename.  Can be overridden with
 # the -n switch, to have more instances on a single server.
 INSTANCE=$(uname -n)
